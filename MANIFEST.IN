@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include quotes/static *
+recursive-include quotes/templates *

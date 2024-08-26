@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Motivational Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        #quote-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        #quote-box h2 {
+            color: #333;
+        }
+        #new-quote {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #new-quote:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quote-box">
+    <h2 id="quote-text">"{{ quote_text }}"</h2>
+    <p id="quote-author">- {{ quote_author }}</p>
+</div>
+
+<button id="new-quote">New Quote</button>
+
+<script>
+    document.getElementById('new-quote').addEventListener('click', function() {
+        window.location.reload();
+    });
+</script>
+
+</body>
+</html>
